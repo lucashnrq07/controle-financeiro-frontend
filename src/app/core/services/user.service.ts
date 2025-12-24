@@ -1,9 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../api.config';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class UserService {
 
-  constructor() { }
+  private readonly API = `${environment.apiUrl}/users`;
+
+  constructor(private http: HttpClient) {}
+
+  create(payload: { name: string; email: string; password: string }) {
+    return this.http.post(this.API, payload);
+  }
 }
