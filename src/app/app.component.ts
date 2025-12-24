@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './layout/header/header.component';
+import { MovementsPageComponent } from './features/movements/movements-page/movements-page.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [HeaderComponent, MovementsPageComponent],
+  template: `
+    <app-header />
+    <app-movements-page />
+  `
 })
-export class AppComponent {
-  title = 'controle-financeiro-frontend';
-}
+export class AppComponent {}

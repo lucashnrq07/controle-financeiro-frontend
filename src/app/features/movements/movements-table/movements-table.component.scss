@@ -1,0 +1,38 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+
+  th {
+    background-color: #f1f5f9;
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #334155;
+  }
+
+  td {
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.9rem;
+  }
+
+  tr:hover {
+    background-color: #f8fafc;
+  }
+}
+
+.amount {
+  &.income {
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  &.expense {
+    color: #dc2626;
+    font-weight: 600;
+  }
+}

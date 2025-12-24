@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Descrição</th>
+      <th>Categoria</th>
+      <th>Tipo</th>
+      <th>Valor</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let m of movements">
+      <td class="amount income">{{ m.date }}</td>
+      <td class="amount income">{{ m.description || '-' }}</td>
+      <td class="amount income">{{ m.categoryName }}</td>
+      <td class="amount income">{{ m.categoryType }}</td>
+      <td class="amount expense">{{ m.amount | currency:'BRL' }}</td>
+    </tr>
+  </tbody>
+</table>
